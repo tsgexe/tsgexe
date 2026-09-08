@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 46" width="700" height="46">
   <defs>
-    <clipPath id="clip-whoami">
+    <clipPath id="clip-learning">
       <rect x="58" y="0" width="0" height="46" class="clip-anim" />
     </clipPath>
   </defs>
@@ -23,14 +23,14 @@
     .clip-anim { animation: typeText 8s infinite; }
 
     @keyframes typeText {
-      0%, 10% { width: 0px; animation-timing-function: steps(10, end); }
-      35%, 75% { width: 100px; animation-timing-function: steps(10, end); }
+      0%, 10% { width: 0px; animation-timing-function: steps(12, end); }
+      35%, 75% { width: 120px; animation-timing-function: steps(12, end); }
       90%, 100% { width: 0px; }
     }
 
     @keyframes moveCursor {
-      0%, 10% { transform: translateX(0px); animation-timing-function: steps(10, end); }
-      35%, 75% { transform: translateX(100px); animation-timing-function: steps(10, end); }
+      0%, 10% { transform: translateX(0px); animation-timing-function: steps(12, end); }
+      35%, 75% { transform: translateX(120px); animation-timing-function: steps(12, end); }
       90%, 100% { transform: translateX(0px); }
     }
 
@@ -38,16 +38,16 @@
   </style>
 
   <rect x="2" y="2" width="696" height="42" fill="#0A1F0A" stroke="#33FF33" stroke-width="2" />
-  
+
   <text x="16" y="29" class="dos-text">C:\&gt; </text>
 
-  <g clip-path="url(#clip-whoami)">
-    <text x="58" y="29" class="dos-text" textLength="100" lengthAdjust="spacing">WHOAMI.EXE</text>
+  <g clip-path="url(#clip-learning)">
+    <text x="58" y="29" class="dos-text" textLength="120" lengthAdjust="spacing">LEARNING.EXE</text>
   </g>
 
   <g class="cursor-mover">
     <rect x="58" y="15" width="9" height="16" class="cursor" />
   </g>
 
-  <text x="682" y="29" class="dos-status" text-anchor="end">[ONLINE]</text>
+  <text x="682" y="29" class="dos-status" text-anchor="end">[IN_PROGRESS]</text>
 </svg>

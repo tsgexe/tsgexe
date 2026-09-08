@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 160" width="700" height="160">
+  <style>
+    .code-text {
+      font-family: Consolas, 'Fira Code', Monaco, monospace;
+      font-size: 13px;
+      fill: #33FF33;
+    }
+    .code-dim { fill: #1da81d; font-weight: bold; }
+    .code-key { font-weight: bold; }
+    .code-str { fill: #85e885; }
+  </style>
+
+  <rect x="2" y="2" width="696" height="156" fill="#0A1F0A" stroke="#33FF33" stroke-width="1.5" />
+
+  <text x="20" y="28" class="code-text code-dim">[OPERATOR_INFO]</text>
+  <text x="20" y="52" class="code-text"><tspan class="code-key">USER</tspan>        = <tspan class="code-str">"Tomás González"</tspan></text>
+  <text x="20" y="74" class="code-text"><tspan class="code-key">CLASS</tspan>       = <tspan class="code-str">"Computer Engineering Student", "Software Developer"</tspan></text>
+  <text x="20" y="96" class="code-text"><tspan class="code-key">LOCATION</tspan>    = <tspan class="code-str">"Patagonia, Argentina"</tspan></text>
+  <text x="20" y="118" class="code-text"><tspan class="code-key">HOBBIES</tspan>     = <tspan class="code-str">"Mechanical Keyboards • Retro Emulation • Music"</tspan></text>
+  <text x="20" y="140" class="code-text"><tspan class="code-key">STATUS</tspan>      = <tspan class="code-str">"Testing my new profile readme project"</tspan></text>
+</svg>

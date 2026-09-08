@@ -1,39 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 35" width="500" height="35">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 46" width="700" height="46">
   <defs>
-    <clipPath id="mask-stats">
-      <rect x="0" y="0" height="35" class="type-mask" />
+    <clipPath id="clip-stats">
+      <rect x="58" y="0" width="0" height="46" class="clip-anim" />
     </clipPath>
   </defs>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=VT323&amp;display=swap');
-    .cmd { font-family: 'VT323', monospace; font-size: 24px; fill: #33FF33; }
-    .type-mask { animation: write-stats 6s steps(26) infinite; }
-    .cursor-mover { animation: cursor-stats 6s steps(26) infinite; }
-    .cursor-blink { animation: blink 0.6s step-end infinite; }
-    
-    @keyframes write-stats {
-      0% { width: 0px; }
-      30% { width: 338px; }
-      75% { width: 338px; }
-      88% { width: 0px; }
-      100% { width: 0px; }
+    .dos-text {
+      font-family: Consolas, 'Fira Code', Monaco, 'Courier New', monospace;
+      font-size: 15px;
+      font-weight: bold;
+      fill: #33FF33;
     }
-    @keyframes cursor-stats {
-      0% { transform: translateX(0px); }
-      30% { transform: translateX(338px); }
-      75% { transform: translateX(338px); }
-      88% { transform: translateX(0px); }
-      100% { transform: translateX(0px); }
+    .dos-status {
+      font-family: Consolas, 'Fira Code', Monaco, monospace;
+      font-size: 13px;
+      font-weight: bold;
+      fill: #33FF33;
     }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
+    .cursor { fill: #33FF33; animation: blink 0.8s step-start infinite; }
+    .cursor-mover { animation: moveCursor 8s infinite; }
+    .clip-anim { animation: typeText 8s infinite; }
+
+    @keyframes typeText {
+      0%, 10% { width: 0px; animation-timing-function: steps(17, end); }
+      35%, 75% { width: 170px; animation-timing-function: steps(17, end); }
+      90%, 100% { width: 0px; }
     }
+
+    @keyframes moveCursor {
+      0%, 10% { transform: translateX(0px); animation-timing-function: steps(17, end); }
+      35%, 75% { transform: translateX(170px); animation-timing-function: steps(17, end); }
+      90%, 100% { transform: translateX(0px); }
+    }
+
+    @keyframes blink { 50% { opacity: 0; } }
   </style>
-  <g clip-path="url(#mask-stats)">
-    <text x="0" y="25" class="cmd" textLength="338" lengthAdjust="spacing">C:\&gt; RUN STATS_MONITOR.BAT</text>
+
+  <rect x="2" y="2" width="696" height="42" fill="#0A1F0A" stroke="#33FF33" stroke-width="2" />
+
+  <text x="16" y="29" class="dos-text">C:\&gt; </text>
+
+  <g clip-path="url(#clip-stats)">
+    <text x="58" y="29" class="dos-text" textLength="170" lengthAdjust="spacing">START METRICS.EXE</text>
   </g>
+
   <g class="cursor-mover">
-    <text x="0" y="25" class="cmd cursor-blink">█</text>
+    <rect x="58" y="15" width="9" height="16" class="cursor" />
   </g>
+
+  <text x="682" y="29" class="dos-status" text-anchor="end">[ACTIVE]</text>
 </svg>
