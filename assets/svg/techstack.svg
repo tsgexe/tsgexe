@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 35" width="500" height="35">
+  <defs>
+    <clipPath id="mask-tech">
+      <rect x="0" y="0" height="35" class="type-mask" />
+    </clipPath>
+  </defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&amp;display=swap');
+    .cmd { font-family: 'VT323', monospace; font-size: 24px; fill: #33FF33; }
+    .type-mask { animation: write-tech 6s steps(22) infinite; }
+    .cursor-mover { animation: cursor-tech 6s steps(22) infinite; }
+    .cursor-blink { animation: blink 0.6s step-end infinite; }
+    
+    @keyframes write-tech {
+      0% { width: 0px; }
+      30% { width: 286px; }
+      75% { width: 286px; }
+      88% { width: 0px; }
+      100% { width: 0px; }
+    }
+    @keyframes cursor-tech {
+      0% { transform: translateX(0px); }
+      30% { transform: translateX(286px); }
+      75% { transform: translateX(286px); }
+      88% { transform: translateX(0px); }
+      100% { transform: translateX(0px); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+  <g clip-path="url(#mask-tech)">
+    <text x="0" y="25" class="cmd" textLength="286" lengthAdjust="spacing">C:\&gt; DIR /B TECH_STACK</text>
+  </g>
+  <g class="cursor-mover">
+    <text x="0" y="25" class="cmd cursor-blink">█</text>
+  </g>
+</svg>
