@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 96" width="700" height="96">
+  <style>
+    .desc-text {
+      font-family: Consolas, 'Fira Code', Monaco, monospace;
+      font-size: 13px;
+      font-weight: bold;
+      fill: #33FF33;
+    }
+    .desc-dim { fill: #1da81d; }
+  </style>
+
+  <rect x="2" y="2" width="696" height="92" fill="#0A1F0A" stroke="#33FF33" stroke-width="1.5" />
+
+  <text x="20" y="28" class="desc-text">
+    <tspan class="desc-dim">&gt; </tspan>Focusing on clean software architecture, backend systems, and modern web tools.
+    <tspan x="20" dy="22" class="desc-dim">&gt; </tspan>Grounded in low-level logic with C and OOP design in Java,
+    <tspan x="36" dy="22">while actively building projects across backend and full-stack development.</tspan>
+  </text>
+</svg>
+

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 46" width="700" height="46">
+  <defs>
+    <clipPath id="clip-learning">
+      <rect x="58" y="0" width="0" height="46" class="clip-anim" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .dos-text {
+      font-family: Consolas, 'Fira Code', Monaco, 'Courier New', monospace;
+      font-size: 15px;
+      font-weight: bold;
+      fill: #33FF33;
+    }
+    .dos-status {
+      font-family: Consolas, 'Fira Code', Monaco, monospace;
+      font-size: 13px;
+      font-weight: bold;
+      fill: #33FF33;
+    }
+    .cursor { fill: #33FF33; animation: blink 0.8s step-start infinite; }
+    .cursor-mover { animation: moveCursor 8s infinite; }
+    .clip-anim { animation: typeText 8s infinite; }
+
+    @keyframes typeText {
+      0%, 10% { width: 0px; animation-timing-function: steps(12, end); }
+      35%, 75% { width: 120px; animation-timing-function: steps(12, end); }
+      90%, 100% { width: 0px; }
+    }
+
+    @keyframes moveCursor {
+      0%, 10% { transform: translateX(0px); animation-timing-function: steps(12, end); }
+      35%, 75% { transform: translateX(120px); animation-timing-function: steps(12, end); }
+      90%, 100% { transform: translateX(0px); }
+    }
+
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+
+  <rect x="2" y="2" width="696" height="42" fill="#0A1F0A" stroke="#33FF33" stroke-width="2" />
+
+  <text x="16" y="29" class="dos-text">C:\&gt; </text>
+
+  <g clip-path="url(#clip-learning)">
+    <text x="58" y="29" class="dos-text" textLength="120" lengthAdjust="spacing">LEARNING.EXE</text>
+  </g>
+
+  <g class="cursor-mover">
+    <rect x="58" y="15" width="9" height="16" class="cursor" />
+  </g>
+
+  <text x="682" y="29" class="dos-status" text-anchor="end">[IN_PROGRESS]</text>
+</svg>
